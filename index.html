@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    body { margin: 0; background: #0d0d0d; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+    header { position: fixed; top:0; width:100%; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.4); backdrop-filter:blur(10px); z-index:50; }
+    a { color:#9ecbff; text-decoration:none; margin-left:20px; font-weight:500; }
+
+    /* Hero Background Grid */
+    .grid-bg {
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events:none;
+    }
+
+    /* Keypad animation container */
+    .keypad-wrapper {
+      display:grid;
+      grid-template-columns: repeat(4, 60px);
+      gap:14px;
+      margin-top:40px;
+    }
+    .key {
+      width:60px; height:60px;
+      border-radius:14px;
+      background:#1a1a1a;
+      display:flex; align-items:center; justify-content:center;
+      font-size:20px; color:#7a7a7a;
+      animation: pop 2.2s infinite ease-in-out;
+    }
+    @keyframes pop {
+      0% { transform: translateY(0); opacity:1; }
+      50% { transform: translateY(-6px); opacity:0.6; }
+      100% { transform: translateY(0); opacity:1; }
+    }
+
+    /* About / Projects / Contact styling */
+    section { padding:100px 0; max-width:1100px; margin:auto; padding-left:20px; padding-right:20px; }
+    h2, h3 { font-weight:800; margin-bottom:20px; }
+    .card { background:#111; border:1px solid #222; border-radius:18px; padding:30px; margin-bottom:40px; }
+    .img-box { width:100%; height:200px; background:#222; border-radius:14px; display:flex; align-items:center; justify-content:center; color:#555; margin-bottom:20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="font-size:22px; font-weight:700;">My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION WITH GRID + KEYPAD ANIMATION -->
+  <section style="position:relative; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center;">
+    <div class="grid-bg"></div>
+
+    <div>
+      <h2 style="font-size:52px; font-weight:900; line-height:1.2;">
+        빠르게 성장하는 <br>
+        <span style="color:#4ba3ff">Full‑Stack Developer</span>
+      </h2>
+      <p style="margin-top:20px; font-size:18px; color:#b5b5b5;">스타트업 프로덕트 감각으로 사용자 경험을 만드는 개발자입니다.</p>
+
+      <!-- Profile Image Placeholder -->
+      <div style="width:140px; height:140px; background:#222; border-radius:22px; margin:40px auto 0; display:flex; align-items:center; justify-content:center; color:#666;">
+        PROFILE IMG
+      </div>
+
+      <div class="keypad-wrapper">
+        <div class="key">1</div>
+        <div class="key">2</div>
+        <div class="key">3</div>
+        <div class="key">4</div>
+        <div class="key">5</div>
+        <div class="key">6</div>
+        <div class="key">7</div>
+        <div class="key">8</div>
+        <div class="key">9</div>
+        <div class="key">0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h3>About Me</h3>
+    <div class="card">
+      안녕하세요. 사용성과 구현 효율을 모두 고려한 프로덕트 개발을 지향합니다. <br><br>
+      프론트엔드와 백엔드를 모두 다루며, 문제를 해결하는 과정에서 가장 많은 성장을 느낍니다.
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h3>Projects</h3>
+
+    <div class="card">
+      <div class="img-box">IMG</div>
+      <h4 style="font-size:22px; font-weight:700;">Project 1</h4>
+      <p style="color:#bbb; margin:12px 0 16px;">프로젝트 설명을 작성하세요.</p>
+      <a href="#" style="color:#4ba3ff;">GitHub →</a>
+    </div>
+
+    <div class="card">
+      <div class="img-box">IMG</div>
+      <h4 style="font-size:22px; font-weight:700;">Project 2</h4>
+      <p style="color:#bbb; margin:12px 0 16px;">프로젝트 설명을 작성하세요.</p>
+      <a href="#" style="color:#4ba3ff;">GitHub →</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h3>Contact</h3>
+    <div class="card">
+      📧 이메일: your.email@example.com <br><br>
+      💼 GitHub: <a href="#" style="color:#4ba3ff;">github.com/your-id</a>
+    </div>
+  </section>
+
+  <footer style="text-align:center; padding:40px 0; color:#666; font-size:14px;">© 2025 Your Name. All rights reserved.</footer>
+</body>
+</html>
